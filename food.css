@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: #CD5C5C;
+    padding: 20px;
+}
+nav{
+    background-color: #CD5C5C;
+    display: grid;
+    place-items: center;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #D3D3D3;
+    transition: 0.2s ease-in;
+    font-size: 18px;
+}
+nav ul a:hover{
+    background-color: rgb(151, 63, 63);
+    color: rgb(253, 249, 249);
+
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-gap: 20px;
+}
+
+.item img {
+    width: 100%; /* Set the width to 100% to make all images the same width */
+    height: 200px; /* Set the height to your desired value for all images */
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+.item img:hover{
+    transform: scale(1.04);
+}
+.item h4{
+    padding:5px;
+    text-align: center;
+}
+.item button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: IndianRed;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 1px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+}
+.item button:hover{
+    transform: scale(1.09);
+}
+
+@media screen and (max-width: 1000px){
+    .items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 768px){
+    .items{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.navbar-nav {
+    margin-left: auto; /* Push the navigation items to the right */
+   }
+
+   .navbar-nav .nav-item {
+    margin-left: 10px; /* Add space between each navigation item */
+   }
